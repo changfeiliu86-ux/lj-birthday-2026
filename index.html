@@ -2441,7 +2441,7 @@
   <button class="music-toggle" id="musicToggle" aria-label="切换背景音乐" title="切换背景音乐">🔇</button>
 
   <audio id="bgMusic" loop preload="none">
-    <source src="bgm.mp3" type="audio/mpeg">
+    <source src="bgm.mp4" type="audio/mp4">
   </audio>
 
   <!-- ═══ 首页 ═══ -->
@@ -2528,7 +2528,7 @@
 
     <div class="level2-message-board" id="messageBoard" aria-live="polite">
       <!-- TODO: 替换为像素小人图片路径 -->
-      <img class="level2-pixel-char" id="pixelCharImg" src="第一关/像素小人.png" alt="LCF" width="80" height="80">
+      <img class="level2-pixel-char" id="pixelCharImg" src="level1/pixel-char.png" alt="LCF" width="80" height="80">
       <div class="level2-message-bubble">
         <p class="level2-message-text" id="messageBoardText">💬 选好答案后，点提交按钮吧～</p>
       </div>
@@ -2616,7 +2616,7 @@
 
     <div class="level4-message-board" id="level4MessageBoard" aria-live="polite">
       <!-- TODO: 替换为像素小人图片路径 -->
-      <img class="level2-pixel-char" id="level4PixelChar" src="第一关/像素小人.png" alt="LCF" width="80" height="80">
+      <img class="level2-pixel-char" id="level4PixelChar" src="level1/pixel-char.png" alt="LCF" width="80" height="80">
       <div class="level2-message-bubble">
         <p class="level2-message-text" id="level4MessageText">💬 当时你怎么回我来着？</p>
       </div>
@@ -2644,7 +2644,7 @@
 
     <div class="level5-message-board" id="level5MessageBoard" aria-live="polite">
       <!-- TODO: 替换为像素小人图片路径 -->
-      <img class="level2-pixel-char" id="level5PixelChar" src="第一关/像素小人.png" alt="LCF" width="80" height="80">
+      <img class="level2-pixel-char" id="level5PixelChar" src="level1/pixel-char.png" alt="LCF" width="80" height="80">
       <div class="level2-message-bubble">
         <p class="level2-message-text" id="level5MessageText">💬 翻翻看，记得这些礼物吗？</p>
       </div>
@@ -2670,7 +2670,7 @@
 
     <div class="level2-message-board" id="level6MessageBoard" aria-live="polite">
       <!-- TODO: 替换为像素小人图片路径 -->
-      <img class="level2-pixel-char" id="level6PixelChar" src="第一关/像素小人.png" alt="LCF" width="80" height="80">
+      <img class="level2-pixel-char" id="level6PixelChar" src="level1/pixel-char.png" alt="LCF" width="80" height="80">
       <div class="level2-message-bubble">
         <p class="level2-message-text" id="level6MessageText">💬 (//▽//)看不见我看不见我看不见我</p>
       </div>
@@ -2859,7 +2859,7 @@
 
     <div class="level7-message-board" id="level7MessageBoard" aria-live="polite">
       <!-- TODO: 替换为像素小人图片路径 -->
-      <img class="level2-pixel-char" src="第一关/像素小人.png" alt="LCF" width="80" height="80">
+      <img class="level2-pixel-char" src="level1/pixel-char.png" alt="LCF" width="80" height="80">
       <div class="level2-message-bubble">
         <p class="level2-message-text" id="level7MessageText">💬 今天想吃什么口味的蛋糕呀？</p>
       </div>
@@ -2899,7 +2899,7 @@
     const STORAGE_KEY = 'loveLetterUnlocked';
     const PROGRESS_VERSION_KEY = 'loveLetterProgressVersion';
     const PROGRESS_VERSION = '1';
-    const BGM_SRC = 'bgm.mp3';
+    const BGM_SRC = 'bgm.mp4';
     const FRAGMENT_NUMBERS = ['①','②','③','④','⑤','⑥','⑦'];
 
     // TODO: 替换封面副标题文案
@@ -2926,32 +2926,32 @@
       {
         id: 'top', label: '上衣',
         items: [
-          { id: 1, label: '条纹衬衫', image: '第一关/上衣1.png' },
-          { id: 2, label: '白色T恤', image: '第一关/上衣2.png' },
-          { id: 3, label: '针织开衫', image: '第一关/上衣3.png' }
+          { id: 1, label: '条纹衬衫', image: 'level1/top1.png' },
+          { id: 2, label: '白色T恤', image: 'level1/top2.png' },
+          { id: 3, label: '针织开衫', image: 'level1/top3.png' }
         ]
       },
       {
         id: 'pants', label: '裤子',
         items: [
-          { id: 1, label: '深色牛仔裤', image: '第一关/裤子1.png' },
-          { id: 2, label: '卡其休闲裤', image: '第一关/裤子2.png' },
-          { id: 3, label: '黑色西裤', image: '第一关/裤子3.png' }
+          { id: 1, label: '深色牛仔裤', image: 'level1/pants1.png' },
+          { id: 2, label: '卡其休闲裤', image: 'level1/pants2.png' },
+          { id: 3, label: '黑色西裤', image: 'level1/pants3.png' }
         ]
       },
       {
         id: 'shoes', label: '鞋子',
         items: [
-          { id: 1, label: '白色球鞋', image: '第一关/鞋子1.png' },
-          { id: 2, label: '棕色短靴', image: '第一关/鞋子2.png' },
-          { id: 3, label: '黑色乐福鞋', image: '第一关/鞋子3.png' }
+          { id: 1, label: '白色球鞋', image: 'level1/shoes1.png' },
+          { id: 2, label: '棕色短靴', image: 'level1/shoes2.png' },
+          { id: 3, label: '黑色乐福鞋', image: 'level1/shoes3.png' }
         ]
       }
     ];
 
     // TODO: 替换为正确答案照片路径
     // TODO: 放入通关展示合照，文件名为 正确答案照片.png
-    const CORRECT_PHOTO = '第一关/正确答案照片.png';
+    const CORRECT_PHOTO = 'level1/photo-correct.png';
 
     const WRONG_MSGS = [
       '哼！你竟然记错我那天穿的什么！再给你一次机会，好好想想！😤',
@@ -2960,12 +2960,12 @@
     ];
 
     // TODO: 替换为合照路径
-    const LEVEL3_PHOTO = '第三关/合照.png';
+    const LEVEL3_PHOTO = 'level3/photo.png';
 
     const LEVEL4_FEEDBACK_MS = 2000;
     const LEVEL4_DEFAULT_MSG = '💬 当时你怎么回我来着？';
     // TODO: 替换为真实图片路径
-    const LEVEL4_MSG3_IMAGE = '第四关/麦当劳照片.png';
+    const LEVEL4_MSG3_IMAGE = 'level4/mcdonalds.png';
 
     const LEVEL4_MESSAGES = [
       {
@@ -3064,14 +3064,14 @@
     // 按上传顺序排列（索引 0-7），每张出现 2 次
     // TODO: 替换为鬼脸图片1-3、礼物图片1-5
     const LEVEL5_PAIR_IMAGES = [
-      '第五关/鬼脸1.png',
-      '第五关/鬼脸2.png',
-      '第五关/鬼脸3.png',
-      '第五关/礼物1.png',
-      '第五关/礼物2.png',
-      '第五关/礼物3.png',
-      '第五关/礼物5.png',
-      '第五关/礼物4.png'
+      'level5/face1.png',
+      'level5/face2.png',
+      'level5/face3.png',
+      'level5/gift1.png',
+      'level5/gift2.png',
+      'level5/gift3.png',
+      'level5/gift5.png',
+      'level5/gift4.png'
     ];
 
     const LEVEL5_MATCH_MESSAGES = [
@@ -3130,7 +3130,7 @@
     const LEVEL2_FEEDBACK_MS = 2000;
     const LEVEL2_DEFAULT_MSG = '💬 选好答案后，点提交按钮吧～';
     // TODO: 替换为像素小人图片路径
-    const PIXEL_CHAR_IMG = '第一关/像素小人.png';
+    const PIXEL_CHAR_IMG = 'level1/pixel-char.png';
 
     const LEVEL2_QUESTIONS = [
       {
