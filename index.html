@@ -2441,7 +2441,7 @@
   <button class="music-toggle" id="musicToggle" aria-label="切换背景音乐" title="切换背景音乐">🔇</button>
 
   <audio id="bgMusic" loop preload="none">
-    <source src="bgm.mp4" type="audio/mp4">
+    <source src="bgm.m4a" type="audio/mp4">
   </audio>
 
   <!-- ═══ 首页 ═══ -->
@@ -2899,7 +2899,7 @@
     const STORAGE_KEY = 'loveLetterUnlocked';
     const PROGRESS_VERSION_KEY = 'loveLetterProgressVersion';
     const PROGRESS_VERSION = '1';
-    const BGM_SRC = 'bgm.mp4';
+    const BGM_SRC = 'bgm.m4a';
     const FRAGMENT_NUMBERS = ['①','②','③','④','⑤','⑥','⑦'];
 
     // TODO: 替换封面副标题文案
@@ -3531,7 +3531,7 @@
                 ${shuffled.map((item, idx) => `
                   <div class="picker-slide${idx === 0 ? ' active' : ''}" data-item-id="${item.id}">
                     <div class="picker-img-wrap">
-                      <img src="${item.image}" alt="${item.label}"
+                      <img ${idx === 0 ? `src="${item.image}"` : `data-src="${item.image}"`} alt="${item.label}" decoding="async"
                            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
                       <div class="picker-placeholder" style="display:none">🖼️<br>图图走丢了</div>
                     </div>
@@ -3579,6 +3579,13 @@
       p.indexLabel.textContent = `${p.index + 1} / 3`;
       p.track.querySelectorAll('.picker-slide').forEach((slide, i) => {
         slide.classList.toggle('active', i === p.index);
+        if (i === p.index) {
+          const img = slide.querySelector('img');
+          if (img && img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
+        }
       });
     }
 
@@ -5570,7 +5577,11 @@
           musicToggle.textContent = '🔊';
           musicToggle.classList.add('playing');
         } catch (e) {
-          console.warn('音频播放被阻止，请再点一次', e);
+          console.warn('音频播放失败', e);
+          isPlaying = false;
+          musicToggle.textContent = '🔇';
+          musicToggle.classList.remove('playing');
+          musicToggle.title = '音乐加载失败，请刷新后重试';
         }
       }
     });
